@@ -8,6 +8,12 @@ eureka:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 5
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
 ---
 spring.config.activate.on-profile: docker
 eureka:
